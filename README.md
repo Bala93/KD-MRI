@@ -1,5 +1,5 @@
 # KD-MRI
-A knowledge distillation framework for image reconstruction and image restoration in MRI workflow
+[A knowledge distillation framework for image reconstruction and image restoration in MRI workflow](https://openreview.net/forum?id=OrBdiT86_O)
 ## MRI Reconstruction
 >Teacher DC-CNN: Five cascades with each cascade having five convolution layers. Student DC-CNN: Five cascades with each cascade having three convolution layers. Attention transfer and imitation loss helps in teacher-student knowledge transfer. Attention transfer loss is obtained between the output of third and second convolution layer of each cascade in Teacher and Student DC-CNN. Imitation loss is obtained between the outputs of Teacher and Student DC-CNN.
 ![dc_cnn_kd](imgs/dc_cnn_kd.png)
