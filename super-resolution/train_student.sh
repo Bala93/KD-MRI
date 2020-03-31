@@ -3,7 +3,6 @@ MODEL='attention_imitation'
 DATASET_TYPE='calgary'
 MODEL_TYPE='student'
 
-#<<ACC_FACTOR_4x
 BATCH_SIZE=4
 NUM_EPOCHS=150
 DEVICE='cuda:0'
@@ -13,5 +12,3 @@ TRAIN_PATH=${BASE_PATH}'/datasets/'${DATASET_TYPE}'/train/acc_'${ACC_FACTOR}
 VALIDATION_PATH=${BASE_PATH}'/datasets/'${DATASET_TYPE}'/validation/acc_'${ACC_FACTOR}
 echo python train_sr_base_model.py --batch-size ${BATCH_SIZE} --num-epochs ${NUM_EPOCHS} --device ${DEVICE} --exp-dir ${EXP_DIR} --train-path ${TRAIN_PATH} --validation-path ${VALIDATION_PATH} --model_type ${MODEL_TYPE}
 python train_sr_base_model.py --batch-size ${BATCH_SIZE} --num-epochs ${NUM_EPOCHS} --device ${DEVICE} --exp-dir ${EXP_DIR} --train-path ${TRAIN_PATH} --validation-path ${VALIDATION_PATH} --model_type ${MODEL_TYPE} 
-
-

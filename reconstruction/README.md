@@ -1,4 +1,4 @@
-# Train procedure
+# Train
 ## Teacher
 
 ```bash
