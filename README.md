@@ -16,7 +16,9 @@ A knowledge distillation framework for image reconstruction and image restoratio
 ## MRI Super-resolution
 >Teacher VDSR: 11 convolution layers. Student VDSR: 7 convolution layers. Attention Transfer Loss: Loss between sixth convolution layer of teacher and fourth convolution layer of student VDSR. Imitation Loss: Loss between reconstructed output of teacher and student VDSR.
 ![vdsr_kd](imgs/vdsr_kd.png)
+
 >Quantitaive comparison of Teacher, Student, KD VDSR
 ![vdsr_table](imgs/vdsr_table.png)
+
 >From Left to Right: Undersampled, Target, Teacher, Student, Ours(KD), Teacher Residue, Student Residue, KD Residue. As with MRI Reconstruction, in addition to lower reconstruction errors the distilled model is able to retain finer structures better when compared to the student.
 ![vdsr_result](imgs/vdsr_result.png)
