@@ -5,6 +5,11 @@
 >Teacher DC-CNN: Five cascades with each cascade having five convolution layers. Student DC-CNN: Five cascades with each cascade having three convolution layers. Attention transfer and imitation loss helps in teacher-student knowledge transfer. Attention transfer loss is obtained between the output of third and second convolution layer of each cascade in Teacher and Student DC-CNN. Imitation loss is obtained between the outputs of Teacher and Student DC-CNN.
 ![dc_cnn_kd](imgs/dc_cnn_kd.png)
 
+>Dataset
+1. [Automated Cardiac Diagnosis Challenge (ACDC)](https://ieeexplore.ieee.org/document/8360453)
+2. [MRBrainS dataset](https://www.hindawi.com/journals/cin/2015/813696/)
+3. [Knee MRI dataset](https://onlinelibrary.wiley.com/doi/abs/10.1002/mrm.26977)
+
 >Train Procedure
 ![kd_train](imgs/kd_train.png)
 
@@ -17,6 +22,9 @@
 ### MRI Super-resolution
 >Teacher VDSR: 11 convolution layers. Student VDSR: 7 convolution layers. Attention Transfer Loss: Loss between sixth convolution layer of teacher and fourth convolution layer of student VDSR. Imitation Loss: Loss between reconstructed output of teacher and student VDSR.
 ![vdsr_kd](imgs/vdsr_kd.png)
+
+>Dataset
+[Calgary-Campinas](https://www.sciencedirect.com/science/article/abs/pii/S1053811917306687)
 
 >Quantitaive comparison of Teacher, Student, KD VDSR
 ![vdsr_table](imgs/vdsr_table.png)
