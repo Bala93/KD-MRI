@@ -42,6 +42,8 @@
  
 ### Directory Structure
 ```
+Use mkdir '[directory name]' to create directories. Create a directory structure as shown below. It is imperative to maintain the below directory structure for smooth compilation of code.
+
 ├── KD-MRI
     |-- reconstruction
     |-- super-resolution
