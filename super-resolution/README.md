@@ -1,8 +1,8 @@
 # Train
 ## Teacher
-
+To train the teacher model:`sh train_teacher.sh` 
 ```bash
-BASE_PATH='/media/hticpose/drive2/Balamurali'
+BASE_PATH=''
 MODEL='attention_imitation'
 DATASET_TYPE='calgary'
 MODEL_TYPE='teacher'
@@ -19,7 +19,7 @@ python train_sr_base_model.py --batch-size ${BATCH_SIZE} --num-epochs ${NUM_EPOC
 ```
 
 ## Student
-
+To train the stuent model: `sh train_student.sh`
 ```bash
 BASE_PATH='/media/hticpose/drive2/Balamurali'
 MODEL='attention_imitation'
@@ -38,7 +38,7 @@ python train_sr_base_model.py --batch-size ${BATCH_SIZE} --num-epochs ${NUM_EPOC
 ```
 
 ## Feature 
-
+To train the student features with teacher supervision: `sh train_feature.sh`
 ```bash
 BASE_PATH='/media/hticpose/drive2/Balamurali'
 MODEL='attention_imitation'
@@ -58,7 +58,7 @@ python train_sr_feature.py --batch-size ${BATCH_SIZE} --num-epochs ${NUM_EPOCHS}
 ```
 
 ### KD
-
+To train the kd model: `sh train_kd.sh`
 ```bash
 BASE_PATH='/media/hticpose/drive2/Balamurali'
 MODEL='attention_imitation'
@@ -80,7 +80,7 @@ python train_sr_kd.py --batch-size ${BATCH_SIZE} --num-epochs ${NUM_EPOCHS} --de
 ```
 
 # Valid
-
+To validate any model `sh valid.sh`
 ```bash
 BASE_PATH='/media/hticpose/drive2/Balamurali'
 MODEL='attention_imitation'
@@ -98,7 +98,7 @@ python valid_sr.py --checkpoint ${CHECKPOINT} --out-dir ${OUT_DIR} --batch-size 
 ```
 
 # Evaluate
-
+To evaluate on reconstructions of the validation set: `sh evaluate.sh`
 ```bash
 BASE_PATH='/media/hticpose/drive2/Balamurali'
 MODEL='attention_imitation'
@@ -113,7 +113,7 @@ python evaluate.py --target-path ${TARGET_PATH} --predictions-path ${PREDICTIONS
 ```
 
 # Report 
-
+To print out the evaluation metrics:`sh report_collect.sh`
 ```bash
 BASE_PATH='/media/hticpose/drive2/Balamurali'
 MODEL='attention_imitation'
