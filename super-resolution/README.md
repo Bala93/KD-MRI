@@ -68,7 +68,7 @@ MODEL_TYPE='kd'
 BATCH_SIZE=4
 NUM_EPOCHS=150
 DEVICE='cuda:0'
-ACC_FACTOR='4x'
+ACC_FACTOR='4x'##5x,8x
 EXP_DIR=${BASE_PATH}'/experiments/'${DATASET_TYPE}'/sr/'${MODEL}'_'${MODEL_TYPE}
 TRAIN_PATH=${BASE_PATH}'/datasets/'${DATASET_TYPE}'/train/acc_'${ACC_FACTOR}
 VALIDATION_PATH=${BASE_PATH}'/datasets/'${DATASET_TYPE}'/validation/acc_'${ACC_FACTOR}
@@ -85,9 +85,9 @@ To validate any model `sh valid.sh`
 BASE_PATH='/media/hticpose/drive2/Balamurali'
 MODEL='attention_imitation'
 DATASET_TYPE='calgary'
-MODEL_TYPE='kd'
+MODEL_TYPE='kd'##teacher,student
 
-ACC_FACTOR='4x'
+ACC_FACTOR='4x'##5x,8x
 BATCH_SIZE=1
 DEVICE='cuda:0'
 DATA_PATH=${BASE_PATH}'/datasets/'${DATASET_TYPE}'/validation/acc_'${ACC_FACTOR}
@@ -103,9 +103,9 @@ To evaluate on reconstructions of the validation set: `sh evaluate.sh`
 BASE_PATH='/media/hticpose/drive2/Balamurali'
 MODEL='attention_imitation'
 DATASET_TYPE='calgary'
-MODEL_TYPE='teacher'
+MODEL_TYPE='teacher'##student,kd
 
-ACC_FACTOR='4x'
+ACC_FACTOR='4x'##5x,8x
 TARGET_PATH=${BASE_PATH}'/datasets/'${DATASET_TYPE}'/validation/acc_'${ACC_FACTOR}
 PREDICTIONS_PATH=${BASE_PATH}'/experiments/'${DATASET_TYPE}'/sr/'${MODEL}'_'${MODEL_TYPE}'/results'
 REPORT_PATH=${BASE_PATH}'/experiments/'${DATASET_TYPE}'/sr/'${MODEL}'_'${MODEL_TYPE}'/'
@@ -118,10 +118,10 @@ To print out the evaluation metrics:`sh report_collect.sh`
 BASE_PATH='/media/hticpose/drive2/Balamurali'
 MODEL='attention_imitation'
 DATASET_TYPE='calgary'
-MODEL_TYPE='teacher'
+MODEL_TYPE='teacher'##student,kd
 
 echo ${MODEL}
-ACC_FACTOR='4x'
+ACC_FACTOR='4x'## 5x,8x
 REPORT_PATH=${BASE_PATH}'/experiments/'${DATASET_TYPE}'/sr/'${MODEL}'_'${MODEL_TYPE}'/report.txt'
 echo ${ACC_FACTOR}
 cat ${REPORT_PATH}
