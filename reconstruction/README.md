@@ -139,7 +139,7 @@ python evaluate.py --target-path ${TARGET_PATH} --predictions-path ${PREDICTIONS
 
 # Report 
 
-To print out the evaluation metrics on the reconstructions generated from the validation set: `sh evaluate.sh`
+To print out the computed evaluation metrics: `sh report_collect.sh`
 ```bash
 BASE_PATH=''
 MODEL='attention_imitation'
