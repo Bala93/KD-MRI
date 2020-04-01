@@ -1,7 +1,7 @@
 # Train
 ## Teacher
 
-To run the Teacher model: `sh train_teacher.sh`
+To train the teacher model: `sh train_teacher.sh`
 ```bash
 ## Teacher
 
@@ -24,9 +24,9 @@ echo python train_base_model.py --batch-size ${BATCH_SIZE} --num-epochs ${NUM_EP
 python train_base_model.py --batch-size ${BATCH_SIZE} --num-epochs ${NUM_EPOCHS} --device ${DEVICE} --exp-dir ${EXP_DIR} --train-path ${TRAIN_PATH} --validation-path ${VALIDATION_PATH} --acceleration_factor ${ACC_FACTOR} --dataset_type ${DATASET_TYPE} --usmask_path ${USMASK_PATH} --model_type ${MODEL_TYPE}
 ```
 
-To train the student model: `sh train_student.sh`
 ## Student
 
+To train the student model: `sh train_student.sh`
 ```bash
 BASE_PATH=''
 MODEL='attention_imitation'
@@ -48,9 +48,9 @@ echo python train_base_model.py --batch-size ${BATCH_SIZE} --num-epochs ${NUM_EP
 python train_base_model.py --batch-size ${BATCH_SIZE} --num-epochs ${NUM_EPOCHS} --device ${DEVICE} --exp-dir ${EXP_DIR} --train-path ${TRAIN_PATH} --validation-path ${VALIDATION_PATH} --acceleration_factor ${ACC_FACTOR} --dataset_type ${DATASET_TYPE} --usmask_path ${USMASK_PATH} --model_type ${MODEL_TYPE}
 ```
 
-To train student feature maps through teacher supervision: `sh train_feature.sh`
 ## Feature 
 
+To train student feature maps through teacher supervision: `sh train_feature.sh`
 ```bash
 BASE_PATH=''
 MODEL='attention_imitation'
@@ -72,9 +72,9 @@ echo python train_feature.py --batch-size ${BATCH_SIZE} --num-epochs ${NUM_EPOCH
 python train_feature.py --batch-size ${BATCH_SIZE} --num-epochs ${NUM_EPOCHS} --device ${DEVICE} --exp-dir ${EXP_DIR} --train-path ${TRAIN_PATH} --validation-path ${VALIDATION_PATH} --acceleration_factor ${ACC_FACTOR} --dataset_type ${DATASET_TYPE} --usmask_path ${USMASK_PATH} --teacher_checkpoint ${TEACHER_CHECKPOINT}
 ```
 
-To train kd model using preetrained student model: `sh train_kd.sh`
 ### KD
 
+To train kd model using pretrained student model: `sh train_kd.sh`
 ```bash
 BASE_PATH=''
 MODEL='attention_imitation'
@@ -97,9 +97,9 @@ echo python train_kd.py --batch-size ${BATCH_SIZE} --num-epochs ${NUM_EPOCHS} --
 python train_kd.py --batch-size ${BATCH_SIZE} --num-epochs ${NUM_EPOCHS} --device ${DEVICE} --exp-dir ${EXP_DIR} --train-path ${TRAIN_PATH} --validation-path ${VALIDATION_PATH} --acceleration_factor ${ACC_FACTOR} --dataset_type ${DATASET_TYPE} --usmask_path ${USMASK_PATH} --teacher_checkpoint ${TEACHER_CHECKPOINT} --student_checkpoint ${STUDENT_CHECKPOINT}
 ```
 
-To valid any model: `sh valid.sh`
 # Valid
 
+To validate any model: `sh valid.sh`
 ```bash
 BASE_PATH=''
 MODEL='attention_imitation'
@@ -118,9 +118,9 @@ echo python valid.py --checkpoint ${CHECKPOINT} --out-dir ${OUT_DIR} --batch-siz
 python valid.py --checkpoint ${CHECKPOINT} --out-dir ${OUT_DIR} --batch-size ${BATCH_SIZE} --device ${DEVICE} --data-path ${DATA_PATH} --acceleration_factor ${ACC_FACTOR} --dataset_type ${DATASET_TYPE} --model_type ${MODEL_TYPE}
 ```
 
-To evaluate on the reconstructions generated from the validation set: `sh evaluate.sh`
 # Evaluate
 
+To evaluate on the reconstructions generated from the validation set: `sh evaluate.sh`
 ```bash
 BASE_PATH=''
 MODEL='attention_imitation'
@@ -137,9 +137,9 @@ echo python evaluate.py --target-path ${TARGET_PATH} --predictions-path ${PREDIC
 python evaluate.py --target-path ${TARGET_PATH} --predictions-path ${PREDICTIONS_PATH} --report-path ${REPORT_PATH} 
 ```
 
-To print out the evlauation metrics: `sh report_collect.sh`
 # Report 
 
+To evaluate on the reconstructions generated from the validation set: `sh evaluate.sh`
 ```bash
 BASE_PATH=''
 MODEL='attention_imitation'
