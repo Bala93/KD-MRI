@@ -34,11 +34,7 @@
 
 ## System setup
 ### Dependencies
-* *PyTorch*
-* *TensorboardX*
-* *numpy*
-* *skimage*
-* *tqdm*
+![requirements.txt](./requirements.txt)
  
 ### Directory Structure
 ```
