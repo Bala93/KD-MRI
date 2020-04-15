@@ -34,7 +34,7 @@
 
 ## System setup
 ### Dependencies
-![requirements.txt](./requirements.txt)
+[requirements.txt](./requirements.txt)
  
 ### Directory Structure
 ```
