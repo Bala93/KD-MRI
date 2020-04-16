@@ -100,3 +100,8 @@ Example: {DATASET_TYPE} = cardiac, {ACC_FACTOR} = 4x, {MODEL} = attention_imitat
                     |-- 2.h5
                     |..
 ```
+### Citation
+
+```
+Murugesan, B., Vijayarangan, S., Sarveswaran, K., Ram, K. and Sivaprakasam, M., 2020. KD-MRI: A knowledge distillation framework for image reconstruction and image restoration in MRI workflow. arXiv preprint arXiv:2004.05319.
+```
