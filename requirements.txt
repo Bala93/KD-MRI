@@ -42,7 +42,7 @@ networkx==2.1
 nibabel==2.5.1
 notebook==6.1.5
 numpy==1.15.4
-opencv-python==3.4.1.15
+opencv-python==3.4.7.28
 pandas==0.24.0
 pandocfilters==1.4.2
 parso==0.3.4
